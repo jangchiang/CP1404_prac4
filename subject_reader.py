@@ -13,25 +13,6 @@ def main():
     print_subject()
 
 
-def print_subject(subjects):
-    for subject in subjects:
-        subject_code = subject[0]
-        lecturer = subject [1]
-        num_std = subject [2]
-        print(f"{subject_code} has {num_std} student with {lecturer}")
-
-
-def get_subject():
-    input_file = open(FILENAME)
-    subject = []
-    for line in input_file:
-        line = line.strip()
-        parts = line.split(',')
-        parts[2] = int(parts[2])
-        subject.append(parts)
-    input_file.close()
-    return subject
-
 
 def get_data():
     """Read data from file formatted like: subject,lecturer,number of students."""
